@@ -23,7 +23,7 @@ const NavbarMenu = (props) => {
     <Navbar collapseOnSelect expand='lg' fixed='top' variant='dark' id='mainNav' ref={navRef}>
       <Container>
         <Navbar.Brand href='#page-top'>
-          <img loading='lazy' src={"/img/logo.png"} alt='...' />
+          <img loading='lazy' src={"/img/" + (lang === "gr" ? "logo1.png" : "logo2.png")} alt='...' />
         </Navbar.Brand>
         <Navbar.Toggle className='navbar-toggler' aria-controls='navbarResponsive'>
           Menu
@@ -32,16 +32,16 @@ const NavbarMenu = (props) => {
         <Navbar.Collapse id='navbarResponsive'>
           <Nav className='text-uppercase ms-auto py-4 py-lg-0'>
             <Nav.Item>
-              <Nav.Link href='#services'>ΠΡΟΪΟΝΤΑ</Nav.Link>
+              <Nav.Link href='#services'>{lang === "gr" ? "ΠΡΟΪΟΝΤΑ" : "PRODUCTS"}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href='#portfolio'>ΕΡΓΑ</Nav.Link>
+              <Nav.Link href='#portfolio'>{lang === "gr" ? "ΕΡΓΑ" : "PROJECTS"}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href='#about'>ΕΤΑΙΡΕΙΑ</Nav.Link>
+              <Nav.Link href='#about'>{lang === "gr" ? "ΕΤΑΙΡΕΙΑ" : "COMPANY"}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href='#contact'>ΕΠΙΚΟΙΝΩΝΙΑ</Nav.Link>
+              <Nav.Link href='#contact'>{lang === "gr" ? "ΕΠΙΚΟΙΝΩΝΙΑ" : "CONTACT"}</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link>
